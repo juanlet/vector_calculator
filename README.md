@@ -46,12 +46,6 @@ For matrix dot multiplication, use the @ operator:
 python array_calculator.py -a "[[1, 2], [3, 4]]" -b "[[5, 6], [7, 8]]" -o "@"
 ```
 
-For matrix cross multiplication, use the x operator, it only works for 3x3 matrices:
-
-```
-python array_calculator.py -a "[1,2,3]" -b "[5, 6, 7]" -o "x"
-```
-
 ## Help
 
 For more information about usage and options, run:
