@@ -1,13 +1,15 @@
 #!/bin/bash
 
-# Create a virtual environment
-python3 -m venv myenv
+# Check if virtual environment exists
+if [ ! -d "myenv" ]; then
+  # Create the virtual environment
+  echo "Creating virtual environment..."
+  python3 -m venv myenv
+fi
 
-# Activate the virtual environment
-source myenv/bin/activate
+# Install dependencies
+echo "Installing dependencies..."
+myenv/bin/pip install -r requirements.txt
 
-# Install required dependencies
-pip install -r requirements.txt
-
-# Display success message
-echo "Virtual environment created and dependencies installed."
+echo "All set! Your virtual environment is ready and the necessary dependencies have been installed. To activate it, use the following command:"
+echo "source myenv/bin/activate"

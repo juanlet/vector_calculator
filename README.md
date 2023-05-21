@@ -1,38 +1,64 @@
 # Array Calculator
 
-The Array Calculator is a simple command-line tool that allows you to perform basic arithmetic operations on arrays or matrices. It utilizes the NumPy library for efficient array operations in Python.
+Array Calculator is a Python script for performing arithmetic and matrix operations on arrays or matrices from the command line. 
+
+## Features
+
+- Performs addition (`+`), subtraction (`-`), element-wise multiplication (`*`), division (`/`), and matrix multiplication (`@`) on arrays or matrices.
+
+## Requirements
+
+- Python 3.7 or above
 
 ## Installation
 
-1. Make sure you have Python installed on your system.
-2. Clone the Git repository or download the source code files.
-3. Open a terminal or command prompt and navigate to the project directory.
+To create a vritual environment on this directory and install all the necessary dependencies run
+
+```
+  ./install.sh
+```
+
+To activate the environment run
+
+```
+source myenv/bin/activate
+```
 
 ## Usage
 
 To use the Array Calculator, follow these steps:
 
 1. Run the script by executing `python array_calculator.py`.
-2. The program will display a welcome message and provide instructions.
-3. Enter the arrays or matrices as prompted, using the appropriate format. For example, `[[1, 2], [3, 4]]`.
-4. Specify the arithmetic operation you want to perform (+, -, *, /).
-5. The program will check the dimensions of the arrays/matrices. If they match, it will display the result of the operation. If not, an error message will be shown.
 
 ## Examples
 
 Here are a few examples of valid inputs:
 
-- Array 1: [[1, 2, 3], [4, 5, 6]]
-  Array 2: [[7, 8, 9], [10, 11, 12]]
-  Operation: +
+```
+python array_calculator.py -a "[[1, 2], [3, 4]]" -b "[[5, 6], [7, 8]]" -o "+"
+```
 
-- Array 1: [[1, 2], [3, 4]]
-  Array 2: [[5, 6], [7, 8]]
-  Operation: *
+The above command will add the two matrices.
+
+For matrix dot multiplication, use the @ operator:
+
+```
+python array_calculator.py -a "[[1, 2], [3, 4]]" -b "[[5, 6], [7, 8]]" -o "@"
+```
+
+For matrix cross multiplication, use the x operator, it only works for 3x3 matrices:
+
+```
+python array_calculator.py -a "[1,2,3]" -b "[5, 6, 7]" -o "x"
+```
 
 ## Help
 
-For more information on how to use the Array Calculator and the supported operations, you can refer to the in-app help command. During runtime, type `help` to access the help menu.
+For more information about usage and options, run:
+
+```
+python array_calculator.py -h
+```
 
 ## License
 
