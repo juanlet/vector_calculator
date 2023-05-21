@@ -1,0 +1,13 @@
+# Python specific
+*.pyc
+__pycache__/
+
+# Virtual environment
+myenv/
+
+# IDE-specific files and directories
+.vscode/
+.idea/
+
+# Generated files
+result.txt
